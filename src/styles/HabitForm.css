@@ -1,0 +1,129 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fb;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  .habit-form-container {
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin: 30px auto;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .habit-form-container h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #007bff;
+  }
+  
+  .goal-section select, .time-date-section select, .weekly-options label {
+    background-color: #f9f9f9;
+  }
+  
+  .time-date-section {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .time-of-day, .start-date {
+    flex: 1;
+  }
+  
+  .weekly-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+  }
+  
+  .weekly-options label {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .weekly-options input {
+    margin-right: 5px;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .cancel, .save {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .cancel {
+    background: #f0f0f0;
+    color: #555;
+  }
+  
+  .cancel:hover {
+    background: #e0e0e0;
+  }
+  
+  .save {
+    background: #007bff;
+    color: white;
+  }
+  
+  .save:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 480px) {
+    .habit-form-container {
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .time-date-section {
+      flex-direction: column;
+    }
+    
+    .weekly-options {
+      flex-direction: column;
+    }
+  }
+  

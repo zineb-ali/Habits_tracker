@@ -1,0 +1,56 @@
+.schedule-container {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 900px;
+  }
+  
+  .schedule-container h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .schedule-container p {
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .schedule-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .schedule-column {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    border: 3px solid;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .schedule-column h2 {
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
+  .task-card {
+    background: #f9f9f9;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: left;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .task-name {
+    font-weight: bold;
+  }
+  
+  .task-time {
+    font-size: 12px;
+    color: #666;
+  }
+  
