@@ -1,0 +1,106 @@
+.form-container {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  width: 400px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 25px;
+}
+
+.top-buttons {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.btn-light {
+  background: #f3f3f3;
+  border: none;
+  margin-left: 5px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #333;
+}
+
+.input-wrapper {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.type-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.icon-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 10px 0 20px;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  justify-content: center;
+  border: 1px dashed #ccc;
+}
+
+.icon-list div {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px;
+  transition: transform 0.2s, background-color 0.2s;
+  border-radius: 5px;
+}
+
+.icon-list div:hover {
+  transform: scale(1.2);
+  background-color: #eee;
+}
+
+.icon-list .selected {
+  background-color: #007bff;
+  color: white;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.btn-blue {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}

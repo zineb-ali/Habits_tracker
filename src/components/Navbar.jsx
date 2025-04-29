@@ -4,15 +4,13 @@ import "./../styles/Navbar.css";
 function Navbar() {
   return (
     <nav className="navbar">
-      <div className="logo">Habitis Trackers </div>
+      <div className="logo">Habit Trackers</div>
       <ul className="nav-links">
-        <li><a href="#">xxxxx</a></li>
-        <li><a href="#">xxxxx</a></li>
-        <li><a href="#">Blog</a></li>
+        
       </ul>
       <div className="auth-buttons">
-        <button className="sign-in">Sign In</button>
-        <button className="sign-up">Sign Up</button>
+        <button className="sign-in">Se connecter</button>
+        <button className="sign-up">S'inscrire</button>
       </div>
     </nav>
   );

@@ -10,7 +10,7 @@ const Footer = () => {
         {/* Logo & Slogan */}
         <div className="footer-section">
           <img src={imglogo} alt="Logo" className="footer-logo" />
-          <p className="footer-tagline">Votre slogan ici</p>  <br />
+        
         </div> <br /> <br />
 
         {/* Informations */}

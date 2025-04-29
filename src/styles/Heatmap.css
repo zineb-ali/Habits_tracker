@@ -1,0 +1,58 @@
+/* Heatmap.css */
+.heatmap-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .heatmap-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #333;
+  }
+  
+  .heatmap-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 mois en colonnes */
+    gap: 20px;
+  }
+  
+  .month-container {
+    text-align: center;
+  }
+  
+  .month-label {
+    font-size: 0.875rem;
+    color: #666;
+    margin-bottom: 10px;
+  }
+  
+  .days-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr); /* 7 jours dans la semaine */
+    gap: 5px;
+  }
+  
+  .day {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #e5e7eb; /* bg-blue-100 by default */
+  }
+  
+  .day-filled {
+    background-color: #3b82f6; /* bg-blue-500 for filled */
+  }
+  
+  .day-empty {
+    background-color: #dbeafe; /* Lighter blue for unfilled */
+  }
+  
+  @media (max-width: 768px) {
+    .heatmap-grid {
+      grid-template-columns: repeat(2, 1fr); /* 2 mois sur petit écran */
+    }
+  }
+  

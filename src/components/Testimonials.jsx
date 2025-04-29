@@ -10,38 +10,38 @@ import img16 from "../assets/img/img16.jpg";
 const testimonials = [
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img11, // Utilisation de l'image importée
   },
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img12, // Utilisation de l'image importée
   },
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img13, // Utilisation de l'image importée
   },
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img14, // Utilisation de l'image importée
   },
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img15, // Utilisation de l'image importée
   },
   {
     name: "Jennifer Olson",
-    role: "Product Manager",
-    text: "Before Habitify, I struggled with managing my time effectively and within deadlines. But the app has helped me create a well-structured routine and stick to it. I've improved my productivity and reduced stress levels.",
+    role: "Chef de Produit",
+    text: "Avant Habitify, j'avais du mal à gérer mon temps efficacement et à respecter les délais. Mais l'application m'a aidé à créer une routine bien structurée et à m'y tenir. J'ai amélioré ma productivité et réduit mon niveau de stress.",
     photo: img16, // Utilisation de l'image importée
   },
   // Ajoutez d'autres témoignages ici...
@@ -59,9 +59,9 @@ const Testimonials = () => {
 
   return (
     <section className="testimonials-container">
-      <h2>Proven Success Stories</h2>
+      <h2>Histoires de Succès Vérifiées</h2>
       <p className="testimonials-description">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laboriosam maxime praesentium amet quia, incidunt veritatis obcaecati eveniet sapiente est soluta? Cum minus eum a voluptas maxime fuga ad nisi.
+        Habitify a aidé des milliers de personnes à améliorer leur gestion du temps et à adopter des habitudes plus saines. Découvrez comment nos utilisateurs ont transformé leur vie.
       </p>
 
       <div className="testimonial-wrapper">

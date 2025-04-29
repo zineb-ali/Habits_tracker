@@ -6,13 +6,14 @@ const MotivationSection = () => {
     <div className="motivation-container">
       <div className="icon">🏆</div>
       <h2 className="title">
-        Why Wait to <br /> Transform Your Life?
+        Pourquoi attendre pour <br /> transformer votre vie ?
       </h2>
       <p className="description">
-        Join over 2 million people who are taking control of their habits and
-        building a better life with Habitify. Whether your aim is to enhance
-        productivity, improve fitness, or simply form healthier daily habits,
-        Habitify has everything you need to make it happen.
+        Rejoignez plus de 2 millions de personnes qui prennent le contrôle de
+        leurs habitudes et construisent une vie meilleure avec Habitify. Que
+        votre objectif soit d'améliorer votre productivité, votre forme physique,
+        ou simplement de créer des habitudes plus saines, Habitify a tout ce
+        dont vous avez besoin pour y parvenir.
       </p>
     </div>
   );

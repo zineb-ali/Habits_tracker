@@ -1,133 +1,129 @@
-import { useState } from "react";
-import "../styles/HabitForm.css";
+import React, { useState } from "react";
+import '../styles/HabitForm.css'; // Import du fichier CSS séparé
 
-const daysOfWeekList = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-const monthsList = [
-  "January", "February", "March", "April", "May", "June", "July", "August", 
-  "September", "October", "November", "December"
-];
+function NewHabitForm() {
+  const [formData, setFormData] = useState({
+    nom: "",
+    objectif: 1,
+    momentDeLaJournee: "",
+    dateDebut: "18/04/2025",
+    repetition: "Quotidien",
+    repetitionInterval: 1,
+  });
 
-export default function NewHabitForm() {
-  const [habitName, setHabitName] = useState("");
-  const [goal, setGoal] = useState(1);
-  const [unit, setUnit] = useState("Times");
-  const [timeOfDay, setTimeOfDay] = useState("");
-  const [startDate, setStartDate] = useState(new Date().toISOString().split("T")[0]);
-  const [frequency, setFrequency] = useState("Per Day");
-  const [repeat, setRepeat] = useState("Daily");
-  const [daysOfWeek, setDaysOfWeek] = useState([]);
-  const [month, setMonth] = useState("");
-  const [interval, setInterval] = useState(1);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
 
-  const handleDayToggle = (day) => {
-    setDaysOfWeek((prev) => 
-      prev.includes(day) ? prev.filter((d) => d !== day) : [...prev, day]
-    );
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Formulaire soumis:", formData);
+    alert("Habitude enregistrée!");
   };
 
   return (
     <div className="habit-form-container">
-      <h2>New Habit</h2>
+      <h2>Nouvelle Habitude</h2>
+      <form onSubmit={handleSubmit} className="habit-form">
+        <label className="habit-form-label">
+          Nom
+          <input
+            type="text"
+            name="nom"
+            value={formData.nom}
+            onChange={handleChange}
+            placeholder="Entrez le nom de l'habitude"
+            required
+            className="habit-form-input"
+          />
+        </label>
 
-      {/* Habit Name */}
-      <label htmlFor="habit-name">Name</label>
-      <input 
-        id="habit-name"
-        type="text" 
-        value={habitName} 
-        onChange={(e) => setHabitName(e.target.value)} 
-        placeholder="Enter habit name"
-      />
+        <label className="habit-form-label">
+          Objectif
+          <input
+            type="number"
+            name="objectif"
+            value={formData.objectif}
+            onChange={handleChange}
+            min="1"
+            max="10"
+            required
+            className="habit-form-input"
+          />
+        </label>
 
-      {/* Goal Selection */}
-      <label htmlFor="goal">Goal</label>
-      <div className="goal-section">
-        <select id="goal" value={goal} onChange={(e) => setGoal(Number(e.target.value))}>
-          {[...Array(100)].map((_, i) => (
-            <option key={i + 1} value={i + 1}>{i + 1}</option>
-          ))}
-        </select>
-        <select id="unit" value={unit} onChange={(e) => setUnit(e.target.value)}>
-          <option value="Times">Times</option>
-          <option value="Minutes">Minutes</option>
-        </select>
-        <select id="frequency" value={frequency} onChange={(e) => setFrequency(e.target.value)}>
-          <option value="Per Day">Per Day</option>
-          <option value="Per Week">Per Week</option>
-          <option value="Per Month">Per Month</option>
-        </select>
-      </div>
+        <label className="habit-form-label">
+          Moment de la journée
+          <select
+            name="momentDeLaJournee"
+            value={formData.momentDeLaJournee}
+            onChange={handleChange}
+            required
+            className="habit-form-select"
+          >
+            <option value="">Sélectionner un moment</option>
+            <option value="Matin">Matin</option>
+            <option value="Midi">Midi</option>
+            <option value="Soir">Soir</option>
+          </select>
+        </label>
 
-      {/* Time of Day & Start Date */}
-      {unit === "Times" && (
-        <div className="time-date-section">
-          <div className="time-of-day">
-            <label htmlFor="time-of-day">Time of Day</label>
-            <select id="time-of-day" value={timeOfDay} onChange={(e) => setTimeOfDay(e.target.value)}>
-              <option value="">Select time</option>
-              <option value="Morning">Morning</option>
-              <option value="Afternoon">Afternoon</option>
-              <option value="Evening">Evening</option>
-            </select>
-          </div>
-          <div className="start-date">
-            <label htmlFor="start-date">Start Date</label>
-            <input 
-              id="start-date"
-              type="date" 
-              value={startDate} 
-              onChange={(e) => setStartDate(e.target.value)} 
-            />
-          </div>
+        <label className="habit-form-label">
+          Date de début
+          <input
+            type="date"
+            name="dateDebut"
+            value={formData.dateDebut}
+            onChange={handleChange}
+            required
+            className="habit-form-input"
+          />
+        </label>
+
+        <label className="habit-form-label">
+          Répéter
+          <select
+            name="repetition"
+            value={formData.repetition}
+            onChange={handleChange}
+            required
+            className="habit-form-select"
+          >
+            <option value="Quotidien">Quotidien</option>
+            <option value="Hebdomadaire">Hebdomadaire</option>
+            <option value="Mensuel">Mensuel</option>
+          </select>
+        </label>
+
+        <label className="habit-form-label">
+          Répéter tous les
+          <input
+            type="number"
+            name="repetitionInterval"
+            value={formData.repetitionInterval}
+            onChange={handleChange}
+            min="1"
+            required
+            className="habit-form-input"
+          />
+          jours
+        </label>
+
+        <div className="habit-form-buttons">
+          <button type="button" className="habit-form-button cancel-btn">
+            Annuler
+          </button>
+          <button type="submit" className="habit-form-button submit-btn">
+            Enregistrer
+          </button>
         </div>
-      )}
-
-      {/* Repeat Options */}
-      <label htmlFor="repeat">Repeat</label>
-      <select id="repeat" value={repeat} onChange={(e) => setRepeat(e.target.value)}>
-        <option value="Daily">Daily</option>
-        <option value="Weekly">Weekly</option>
-        <option value="Monthly">Monthly</option>
-      </select>
-
-      {/* If Weekly, select days of the week */}
-      {repeat === "Weekly" && (
-        <div className="weekly-options">
-          {daysOfWeekList.map((day) => (
-            <label key={day} htmlFor={day}>
-              <input
-                id={day}
-                type="checkbox"
-                checked={daysOfWeek.includes(day)}
-                onChange={() => handleDayToggle(day)}
-              />
-              {day}
-            </label>
-          ))}
-        </div>
-      )}
-
-      {/* If Monthly, select a month */}
-      {repeat === "Monthly" && (
-        <select id="month" value={month} onChange={(e) => setMonth(e.target.value)}>
-          {monthsList.map((m) => (
-            <option key={m} value={m}>{m}</option>
-          ))}
-        </select>
-      )}
-
-      {/* Interval Selection */}
-      <label htmlFor="interval">Repeat Every</label>
-      <select id="interval" value={interval} onChange={(e) => setInterval(Number(e.target.value))}>
-        {[...Array(10)].map((_, i) => (
-          <option key={i + 1} value={i + 1}>Repeat every {i + 1} days</option>
-        ))}
-      </select>
-
-      <div className="form-buttons">
-        <button className="cancel">Cancel</button>
-        <button className="save">Save</button>
-      </div>
+      </form>
     </div>
   );
 }
+
+export default NewHabitForm;
