@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "projet-de-synthese",
+=======
+  "name": "projet_synthese",
+>>>>>>> amie/main
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,11 +15,15 @@
   },
   "dependencies": {
     "react": "^19.0.0",
+<<<<<<< HEAD
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
     "react-router-dom": "^7.5.1",
     "recharts": "^2.15.3",
     "swiper": "^11.2.4"
+=======
+    "react-dom": "^19.0.0"
+>>>>>>> amie/main
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
