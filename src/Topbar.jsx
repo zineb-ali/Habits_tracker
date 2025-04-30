@@ -2,34 +2,36 @@ import React, { useState } from "react";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Sidebar from "./components/Sidebar";
-import "./App.css"; // Importer le CSS de l'application
-function App() {
+import Topbar from "./Topbar"; // ← ici l'import de ta topbar
+
+function TopBar() {
   const [isLogin, setIsLogin] = useState(true);
-  const [isAuthenticated, setIsAuthenticated] = useState(false); // connecté ou pas
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleSignIn = (credentials) => {
     console.log("Sign In avec :", credentials);
-    setIsAuthenticated(true); // simuler connexion
+    setIsAuthenticated(true);
   };
 
   const handleSignUp = (credentials) => {
     console.log("Sign Up avec :", credentials);
-    setIsAuthenticated(true); // simuler inscription
+    setIsAuthenticated(true);
   };
 
-  // Si connecté, afficher la sidebar
   if (isAuthenticated) {
     return (
-      <div style={{ display: "flex" }}>
+      <div style={{ display: "flex", height: "100vh" }}>
         <Sidebar />
-        <div style={{ padding: "20px", flexGrow: 1 }}>
-          <h1>Bienvenue dans ton espace !</h1>
+        <div style={{ flexGrow: 1, display: "flex", flexDirection: "column" }}>
+          <Topbar /> {/* ← ici on affiche la topbar */}
+          <div style={{ padding: "20px", flexGrow: 1 }}>
+            <h1>Bienvenue dans ton espace !</h1>
+          </div>
         </div>
       </div>
     );
   }
 
-  // Sinon, afficher auth
   return (
     <div className="App">
       <h1>{isLogin ? "Connexion" : "Inscription"}</h1>
@@ -46,7 +48,6 @@ function App() {
       </p>
     </div>
   );
-  
 }
 
-export default App;
+export default TopBar;

@@ -11,7 +11,6 @@ const SignIn = ({ onSignIn }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Connexion</h2>
       <input
         type="email"
         placeholder="Email"

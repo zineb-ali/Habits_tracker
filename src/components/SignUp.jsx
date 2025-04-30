@@ -18,7 +18,6 @@ const SignUp = ({ onSignUp }) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2>Inscription</h2>
 
       <input
         type="text"
